@@ -1,0 +1,536 @@
+{
+  "variables": [
+    {
+      "raw": "重现期转换系数Cp",
+      "safe": "cp",
+      "description": "重现期转换系数Cp",
+      "category": "坡面汇流计算",
+      "example_value": 0.3
+    },
+    {
+      "raw": "降雨历时转换系数Ct",
+      "safe": "ct",
+      "description": "降雨历时转换系数Ct",
+      "category": "坡面汇流计算",
+      "example_value": 0.3
+    },
+    {
+      "raw": "I₅,₁₀",
+      "safe": "i_5_10",
+      "description": "5年重现期、10分钟历时的暴雨强度 (mm/min)",
+      "category": "坡面汇流计算",
+      "example_value": 2.1
+    },
+    {
+      "raw": "平均降雨强度",
+      "safe": "pjjyqd",
+      "description": "平均降雨强度",
+      "category": "坡面汇流计算",
+      "example_value": 2.1
+    },
+    {
+      "raw": "地表径流系数",
+      "safe": "dbjlxs",
+      "description": "地表径流系数",
+      "category": "坡面汇流计算",
+      "example_value": 2.1
+    },
+    {
+      "raw": "地表粗度系数m1",
+      "safe": "m1",
+      "description": "地表粗度系数m1",
+      "category": "坡面汇流历时T1",
+      "example_value": 2.1
+    },
+    {
+      "raw": "坡面流的长度Ls",
+      "safe": "ls",
+      "description": "坡面流的长度Ls",
+      "category": "坡面汇流历时T1",
+      "example_value": 2.1
+    },
+    {
+      "raw": "坡面流的坡度is",
+      "safe": "pomianpodu_is",
+      "description": "坡面流的坡度is:注意is是python关键字，不能使用",
+      "category": "坡面汇流历时T1",
+      "example_value": 2.1
+    },
+    {
+      "raw": "第i段水沟长度",
+      "safe": "didcd",
+      "description": "第i段水沟长度",
+      "category": "沟内汇流历时T2",
+      "example_value": 2.1
+    },
+    {
+      "raw": "第i段沟平均流速",
+      "safe": "didpjls",
+      "description": "第i段沟平均流速",
+      "category": "沟内汇流历时T2",
+      "example_value": 2.1
+    },
+    {
+      "raw": "汇水面积",
+      "safe": "area_huishui",
+      "description": "汇水面积",
+      "category": "产流因子k1",
+      "example_value": 2.1
+    },
+    {
+      "raw": "η值",
+      "safe": "Eta",
+      "description": "η值",
+      "category": "产流因子k1",
+      "example_value": 2.1
+    },
+    {
+      "raw": "五十年一遇sp",
+      "safe": "sp_50",
+      "description": "五十年一遇sp",
+      "category": "产流因子k1",
+      "example_value": 2.1
+    },
+    {
+      "raw": "百年一遇sp",
+      "safe": "sp_100",
+      "description": "百年一遇sp",
+      "category": "产流因子k1",
+      "example_value": 2.1
+    },
+    {
+      "raw": "损失指数R",
+      "safe": "sszs_R",
+      "description": "损失指数R",
+      "category": "损失因子k2",
+      "example_value": 2.1
+    },
+    {
+      "raw": "损失指数r1",
+      "safe": "sszs_r1",
+      "description": "损失指数r1",
+      "category": "损失因子k2",
+      "example_value": 2.1
+    },
+    {
+      "raw": "五十年一遇衰减指数",
+      "safe": "decry_50",
+      "description": "五十年一遇衰减指数",
+      "category": "损失因子k2",
+      "example_value": 2.1
+    },
+    {
+      "raw": "百年一遇衰减指数",
+      "safe": "decry_100",
+      "description": "百年年一遇衰减指数",
+      "category": "损失因子k2",
+      "example_value": 2.1
+    },
+    {
+      "raw": "五十年一遇损失因子k2",
+      "safe": "k2_50",
+      "description": "五十年一遇损失因子k2",
+      "category": "随暴雨衰减指数n变化指数n",
+      "example_value": 2.1
+    },
+    {
+      "raw": "百年一遇损失因子k2",
+      "safe": "k2_100",
+      "description": "百年一遇损失因子k2",
+      "category": "随暴雨衰减指数n变化指数n",
+      "example_value": 2.1
+    },
+    {
+      "raw": "五十年一遇随暴雨衰减指数n变化指数",
+      "safe": "decay_50",
+      "description": "50年一遇暴雨衰减指数n的变化系数",
+      "category": "造峰因子k3",
+      "example_value": 0.3
+    },
+    {
+      "raw": "百年一遇随暴雨衰减指数n变化指数",
+      "safe": "decay_100",
+      "description": "100年一遇暴雨衰减指数n的变化系数",
+      "category": "造峰因子k3",
+      "example_value": 0.3
+    },
+    {
+      "raw": "主河床糙率系数m1",
+      "safe": "m1",
+      "description": "主河床糙率系数m1",
+      "category": "主河槽流速系数A1",
+      "example_value": 0.3
+    },
+    {
+      "raw": "断面扩散系数α0",
+      "safe": "d_a0",
+      "description": "断面扩散系数α0",
+      "category": "主河槽流速系数A1",
+      "example_value": 0.3
+    },
+    {
+      "raw": "主河床槽长度",
+      "safe": "main_c",
+      "description": "主河床槽长度",
+      "category": "河槽汇流因子K1",
+      "example_value": 0.3
+    },
+        {
+      "raw": "主河槽流速系数A1",
+      "safe": "main_a1",
+      "description": "主河槽流速系数A1",
+      "category": "河槽汇流因子K1",
+      "example_value": 0.3
+    },
+    {
+      "raw": "主河槽平均坡率I1",
+      "safe": "I1",
+      "description": "主河槽平均坡率I1",
+      "category": "河槽汇流因子K1",
+      "example_value": 0.3
+    },
+    {
+      "raw": "支沟总长",
+      "safe": "Li",
+      "description": "支沟总长",
+      "category": "河槽汇流因子K1",
+      "example_value": 0.3
+    },
+    {
+      "raw": "流域坡面平均长度",
+      "safe": "percent_long",
+      "description": "流域坡面平均长度",
+      "category": "山坡汇流因子K2",
+      "example_value": 0.3
+    },
+    {
+      "raw": "坡面流速系数A2",
+      "safe": "a2",
+      "description": "坡面流速系数A2",
+      "category": "山坡汇流因子K2",
+      "example_value": 0.3
+    },
+    {
+      "raw": "流域坡面平均坡度I2",
+      "safe": "I2",
+      "description": "流域坡面平均坡度I2",
+      "category": "山坡汇流因子K2",
+      "example_value": 0.3
+    },
+    {
+      "raw": "河槽汇流因子K1",
+      "safe": "K1",
+      "description": "河槽汇流因子K1",
+      "category": "河槽和山坡综合汇流因子x",
+      "example_value": 0.3
+    },
+    {
+      "raw": "山坡汇流因子K2",
+      "safe": "K2",
+      "description": "山坡汇流因子K2",
+      "category": "河槽和山坡综合汇流因子x",
+      "example_value": 0.3
+    },
+    {
+      "raw": "河槽和山坡综合汇流因子x",
+      "safe": "total_x",
+      "description": "河槽和山坡综合汇流因子x",
+      "category": "设计坡面径流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "反映流域汇流特征的指数y",
+      "safe": "total_y",
+      "description": "反映流域汇流特征的指数y",
+      "category": "设计坡面径流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "五十年一遇产流因子K1",
+      "safe": "k1_50",
+      "description": "五十年一遇产流因子K1",
+      "category": "设计坡面径流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "百年一遇产流因子K1",
+      "safe": "k1_100",
+      "description": "百年一遇产流因子K1",
+      "category": "设计坡面径流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "五十年一遇设计坡面径流量Qp",
+      "safe": "qp_50",
+      "description": "五十年一遇设计坡面径流量Qp",
+      "category": "设计坡面径流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "百年一遇设计坡面径流量Qp",
+      "safe": "qp_100",
+      "description": "百年一遇设计坡面径流量Qp",
+      "category": "设计坡面径流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "五十年一遇汇流时间H",
+      "safe": "H_50",
+      "description": "五十年一遇汇流时间H",
+      "category": "设计坡面径流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "百年一遇汇流时间H",
+      "safe": "H_100",
+      "description": "百年一遇汇流时间H",
+      "category": "设计坡面径流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "流域汇流时间",
+      "safe": "calc_time",
+      "description": "流域汇流时间",
+      "category": "按照铁路工务手册计算设计径流量",
+      "example_value": 0.3
+    },
+    {
+      "raw": "洪峰径流系数",
+      "safe": "hongfeng_x",
+      "description": "洪峰径流系数",
+      "category": "按照铁路工务手册计算设计径流量",
+      "example_value": 0.3
+    },
+    {
+      "raw": "铁路工程水文勘测设计-五十年一遇洪峰流量",
+      "safe": "swsj_50",
+      "description": "铁路工程水文勘测设计-五十年一遇洪峰流量",
+      "category": "确定清水流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "铁路路基设计设计-五十年一遇洪峰流量",
+      "safe": "ljsj_50",
+      "description": "铁路路基设计设计-五十年一遇洪峰流量",
+      "category": "确定清水流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "铁路务工手册设计-五十年一遇洪峰流量",
+      "safe": "wgsj_50",
+      "description": "铁路务工手册设计-五十年一遇洪峰流量",
+      "category": "确定清水流量Qp",
+      "example_value": 0.3
+    },
+        {
+      "raw": "铁路工程水文勘测设计-百年一遇洪峰流量",
+      "safe": "swsj_50",
+      "description": "铁路工程水文勘测设计-百年一遇洪峰流量",
+      "category": "确定清水流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "铁路路基设计设计-百年一遇洪峰流量",
+      "safe": "ljsj_50",
+      "description": "铁路路基设计设计-百年一遇洪峰流量",
+      "category": "确定清水流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "铁路务工手册设计-百年一遇洪峰流量",
+      "safe": "wgsj_50",
+      "description": "铁路务工手册设计-百年一遇洪峰流量",
+      "category": "确定清水流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "铁路路基设计设计-降雨历时",
+      "safe": "ljsj_time",
+      "description": "铁路路基设计设计-降雨历时",
+      "category": "确定清水流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "铁路务工手册设计-降雨历时",
+      "safe": "wgsj_time",
+      "description": "铁路务工手册设计-降雨历时",
+      "category": "确定清水流量Qp",
+      "example_value": 0.3
+    },
+    {
+      "raw": "五十年一遇洪峰流量",
+      "safe": "hfll_50",
+      "description": "五十年一遇洪峰流量",
+      "category": "计算泥石流流量Qc",
+      "example_value": 0.3
+    },
+    {
+      "raw": "百年一遇洪峰流量",
+      "safe": "hfll_10",
+      "description": "百年一遇洪峰流量",
+      "category": "计算泥石流流量Qc",
+      "example_value": 0.3
+    },
+    {
+      "raw": "堵塞系数",
+      "safe": "Dc",
+      "description": "堵塞系数",
+      "category": "计算泥石流流量Qc",
+      "example_value": 0.3
+    },
+    {
+      "raw": "泥石流容重",
+      "safe": "lsl_w",
+      "description": "泥石流容重",
+      "category": "计算泥石流流量Qc",
+      "example_value": 0.3
+    },
+    {
+      "raw": "清水容重",
+      "safe": "qs_w",
+      "description": "清水容重",
+      "category": "计算泥石流流量Qc",
+      "example_value": 0.3
+    },
+    {
+      "raw": "泥石流中固体物质容重",
+      "safe": "gt_w",
+      "description": "泥石流中固体物质容重",
+      "category": "计算泥石流流量Qc",
+      "example_value": 0.3
+    },
+    {
+      "raw": "泥石流泥沙修正系数",
+      "safe": "psi_c",
+      "description": "泥石流泥沙修正系数",
+      "category": "计算泥石流流量Qc",
+      "example_value": 0.3
+    },
+    {
+      "raw": "沟道糙率",
+      "safe": "gdcl",
+      "description": "沟道糙率",
+      "category": "计算稀性泥石流流速vc",
+      "example_value": 0.3
+    },
+    {
+      "raw": "水力半径",
+      "safe": "sl_r",
+      "description": "水力半径",
+      "category": "计算稀性泥石流流速vc",
+      "example_value": 0.3
+    },
+    {
+      "raw": "水力坡率",
+      "safe": "sl_i_c",
+      "description": "水力坡率",
+      "category": "计算稀性泥石流流速vc",
+      "example_value": 0.3
+    },
+    {
+      "raw": "泥石流排泄系数K",
+      "safe": "nsl_k",
+      "description": "泥石流排泄系数K",
+      "category": "一次泥石流过流总量Q",
+      "example_value": 0.3
+    },
+    {
+      "raw": "汇流时间",
+      "safe": "qc_time",
+      "description": "汇流时间",
+      "category": "一次泥石流过流总量Q",
+      "example_value": 0.3
+    },
+    {
+      "raw": "百年一遇泥石流洪峰流量",
+      "safe": "nslhfll_100",
+      "description": "百年一遇泥石流洪峰流量",
+      "category": "一次泥石流过流总量Q",
+      "example_value": 0.3
+    },
+    {
+      "raw": "五十年一遇泥石流洪峰流量",
+      "safe": "nslhfll_50",
+      "description": "五十年一遇泥石流洪峰流量",
+      "category": "一次泥石流过流总量Q",
+      "example_value": 0.3
+    },
+    {
+      "raw": "50年一次泥石流过流总量Q",
+      "safe": "nslglzl_50",
+      "description": "50年一次泥石流过流总量Q",
+      "category": "一次泥石流冲出固体物QH",
+      "example_value": 0.3
+    },
+    {
+      "raw": "100年一次泥石流过流总量Q",
+      "safe": "nslglzl_100",
+      "description": "100年一次泥石流过流总量Q",
+      "category": "一次泥石流冲出固体物QH",
+      "example_value": 0.3
+    },
+    {
+      "raw": "全面考虑的摩擦系数",
+      "safe": "mcxs",
+      "description": "全面考虑的摩擦系数",
+      "category": "泥石流中石块运动速度vs",
+      "example_value": 0.3
+    },
+    {
+      "raw": "最大石块的粒径",
+      "safe": "stone_dmax",
+      "description": "最大石块的粒径",
+      "category": "泥石流中石块运动速度vs",
+      "example_value": 0.3
+    },
+    {
+      "raw": "流速",
+      "safe": "vc",
+      "description": "流速",
+      "category": "泥石流最大冲起高度△H和受沟床阻力影响爬高△h",
+      "example_value": 0.3
+    },
+    {
+      "raw": "建筑物受力面与泥石流冲压力方向夹角",
+      "safe": "jiajiao",
+      "description": "建筑物受力面与泥石流冲压力方向夹角",
+      "category": "泥石流最大冲起高度△H和受沟床阻力影响爬高△h",
+      "example_value": 0.3
+    },
+    {
+      "raw": "α₁",
+      "safe": "alpha_1",
+      "description": "汇流参数α₁",
+      "category": "水文模型",
+      "example_value": 0.6
+    },
+    {
+      "raw": "Δt",
+      "safe": "delta_t",
+      "description": "计算时间步长 (分钟)",
+      "category": "通用参数",
+      "example_value": 5
+    },
+    {
+      "raw": "雨量P",
+      "safe": "rainfall_p",
+      "description": "设计降雨量 (mm)",
+      "category": "降雨",
+      "example_value": 80
+    },
+    {
+      "raw": "面积A",
+      "safe": "area_a",
+      "description": "汇水面积 (km²)",
+      "category": "流域参数",
+      "example_value": 2.5
+    },
+    {
+      "raw": "ψ",
+      "safe": "psi",
+      "description": "径流系数",
+      "category": "径流",
+      "example_value": 0.7
+    }
+  ]
+}

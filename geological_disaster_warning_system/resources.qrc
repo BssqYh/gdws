@@ -1,0 +1,13 @@
+<RCC>
+    <qresource prefix="/">
+        <file>resources/background.png</file>
+        <file>resources/help.png</file>
+        <file>resources/icon.ico</file>
+        <file>resources/loading.gif</file>
+        <file>resources/variables.json</file>
+        <file>resources/railway_lines.json</file>
+        <file>resources/railway_lines_index.json</file>
+        <file>resources/release.sql</file>
+        <file>resources/menu_content_release.sql</file>
+    </qresource>
+</RCC>
